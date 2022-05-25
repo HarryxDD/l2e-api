@@ -53,7 +53,7 @@ export class UserService {
     }
 
     async updateUser(userId: string, updateUserDTO: UpdateUserDto) {
-        return this.userModel.findOneAndUpdate({ userId }, updateUserDTO);
+        return this.userModel.findOneAndUpdate({ userId }, updateUserDTO); // have not encrypt the password yet
     }
 
     sanitizeUser(user: User) {
