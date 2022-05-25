@@ -6,6 +6,9 @@ import { AppService } from './app.service';
 import { UserModule } from './user/user.module';
 import { AuthModule } from './auth/auth.module';
 import { TodoModule } from './todo/todo.module';
+import { ActivityModule } from './activity/activity.module';
+import { ActAuditlogModule } from './act-auditlog/act-auditlog.module';
+import { ItemModule } from './item/item.module';
 
 @Module({
   imports: [
@@ -17,6 +20,9 @@ import { TodoModule } from './todo/todo.module';
     UserModule,
     AuthModule,
     TodoModule,
+    ActivityModule,
+    ActAuditlogModule,
+    ItemModule,
   ],
   controllers: [AppController],
   providers: [AppService],

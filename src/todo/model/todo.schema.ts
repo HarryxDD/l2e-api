@@ -1,5 +1,4 @@
 import * as mongoose from 'mongoose';
-import { User } from 'src/user/model/user';
 
 export const TodoSchema = new mongoose.Schema({
     title: { type: String, required: true },
