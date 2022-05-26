@@ -51,15 +51,16 @@ export class UsersController {
         return await this.actAuditlogService.createActAuditlog(createActAuditlogDTO);
     }
 
-    @Patch('item/:itemId') 
-    async buyItem(@Param('itemId') itemId: string, @Body() updateItemDto: UpdateItemDto) {
-        // Need to have the store
-        return await this.itemService.updateOwnerOfItem(itemId, updateItemDto);
-    }
-
     @Get('item/:ownerId')
     async getItemsByOwner(@Param('ownerId') ownerId: string): Promise<Item[]> {
         return this.itemService.findItemsByOwner(ownerId);
     }
+
+    // @Patch('item/:itemId') 
+    // async buyItem(@Param('itemId') itemId: string, @Body() updateItemDto: UpdateItemDto) {
+    //      Need to have the store
+    //      Still in develop
+    //     return await this.itemService.updateOwnerOfItem(itemId, updateItemDto);
+    // }
 
 }

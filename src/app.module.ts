@@ -9,6 +9,7 @@ import { TodoModule } from './todo/todo.module';
 import { ActivityModule } from './activity/activity.module';
 import { ActAuditlogModule } from './act-auditlog/act-auditlog.module';
 import { ItemModule } from './item/item.module';
+import { StoreItemModule } from './store-item/store-item.module';
 
 @Module({
   imports: [
@@ -23,6 +24,7 @@ import { ItemModule } from './item/item.module';
     ActivityModule,
     ActAuditlogModule,
     ItemModule,
+    StoreItemModule,
   ],
   controllers: [AppController],
   providers: [AppService],

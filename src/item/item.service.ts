@@ -17,14 +17,14 @@ export class ItemService {
     }
 
     async findItems(): Promise<Item[]> {
-        return await this.itemModel.find().populate("ownerId");
+        return await this.itemModel.find();
     }
 
     async findItemsByOwner(ownerId: string): Promise<Item[]> {
         return await this.itemModel.find({ ownerId });
     }
 
-    async updateOwnerOfItem(itemId: string, ownerId: UpdateItemDto): Promise<Item> {
-        return await this.itemModel.findOneAndUpdate({ itemId }, ownerId);
-    }
+    // async updateOwnerOfItem(itemId: string, ownerId: UpdateItemDto): Promise<Item> {
+    //     return await this.itemModel.findOneAndUpdate({ itemId }, ownerId);
+    // }
 }
